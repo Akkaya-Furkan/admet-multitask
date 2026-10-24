@@ -1,0 +1,78 @@
+{
+  "audit.json": {
+    "bytes": 4785,
+    "sha256": "295c57f36145dd6b7dc5f29c57ece8d18adc92483e9c7d1600ec7adac24849a3"
+  },
+  "comparison.csv": {
+    "bytes": 668,
+    "sha256": "c3439a117b04fcf9b67e026f6e5b5968df2b0797f6a7f50a0b8b74689439710c"
+  },
+  "metadata.json": {
+    "bytes": 1723,
+    "sha256": "94e7dac0654e367a777e8421da1cd76b45f5ff4c4a3831b404e7424d817d5db0"
+  },
+  "metrics.csv": {
+    "bytes": 8495,
+    "sha256": "8c490134f15781a1a2a9e3b27d2f91aadefbb048f4bfbb2e5df9b844e46485e3"
+  },
+  "molecules.csv.gz": {
+    "bytes": 409358,
+    "sha256": "876b1643f0e38b5404e2595c9fbe05f3130eef49f74115b9db843f055540d11e"
+  },
+  "nearest_neighbors.csv.gz": {
+    "bytes": 148029,
+    "sha256": "e067774a5992a9fbd0a448bf0c81e4ea1d1a07f88e533872d477bc3160e93a64"
+  },
+  "paired_differences.csv": {
+    "bytes": 3127,
+    "sha256": "6a0d42018888c13084440ce9f3d5cb01ce970a9bb6f8c37ee1308b9ff34fc41a"
+  },
+  "plan.json": {
+    "bytes": 1089,
+    "sha256": "e84fdc9ef8143e71546f0088fd706f7511b6a4e8e8c4093b6a705c656c5fabfd"
+  },
+  "predictions.csv.gz": {
+    "bytes": 2543388,
+    "sha256": "7d49430d27b879a987a0e588c049c0b3b325bb706c82d29c2af97dfe04652829"
+  },
+  "robustness.png": {
+    "bytes": 96273,
+    "sha256": "4902bdf23c45905768b19733a3f0c62aa58f910807e095792e94aca11286fb91"
+  },
+  "search.json": {
+    "bytes": 7527,
+    "sha256": "c421f05757c227d70653fc3587d4381e7ba3c50cc90f10718bf3c4184a3e73de"
+  },
+  "selection_20261024.json": {
+    "bytes": 1505,
+    "sha256": "30b6b7416dc209f7717ddc8e49eea048b470e4a2e0690317fe0836e6106965fc"
+  },
+  "selection_20261025.json": {
+    "bytes": 1510,
+    "sha256": "510fa31ae843ab529d42858ef922126687d33375ca75ce404ab831abd4172439"
+  },
+  "selection_20261026.json": {
+    "bytes": 1508,
+    "sha256": "5bf0f72d124f1781379db2ad4130a7c42faa9720598daa78fcb4e09492da2d08"
+  },
+  "selection_20261027.json": {
+    "bytes": 1508,
+    "sha256": "871a64baadce18f0ec0754eb700acd6fedcdbd2c1a7e88573fb21c58aa9d9410"
+  },
+  "selection_20261028.json": {
+    "bytes": 1508,
+    "sha256": "733d3e9f9bef353301d155a98a8121ad5be2e68dea30bac6b385cd7a5de0a5cd"
+  },
+  "similarity_summary.csv": {
+    "bytes": 2865,
+    "sha256": "4ec1bfe24fad68927389db78fa84567c7670e577abc68806e253ae89169e28e6"
+  },
+  "splits.csv.gz": {
+    "bytes": 304704,
+    "sha256": "27295dc0d4f1bf5f77184ecd05372e6f44a18e8c94f86e94eda5a0d267dc0ae9"
+  },
+  "training.json": {
+    "bytes": 270331,
+    "sha256": "12b105095755e323b77112025851d8b82ecbaf866e9d83e4ae80f35e1d217c0c"
+  }
+}

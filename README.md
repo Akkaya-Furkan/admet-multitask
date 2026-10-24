@@ -10,6 +10,12 @@ single-task models?
 the three paired, multiplicity-adjusted improvement intervals excludes zero.
 The CYP2D6 point estimate improves, while both regression point estimates worsen.
 
+**Robustness follow-up (2026-10-24): still no multitask benefit.** Over five
+scaffold-split seeds × five model seeds, with an equal-budget validation-only
+search, multitask learning is 0/3 supported and solubility is *worse* (interval
+entirely below zero); the earlier CYP2D6 point gain reverses sign. Details
+[below](#robustness-follow-up).
+
 ## Approach
 
 Use public [Therapeutics Data Commons ADME datasets](https://tdcommons.ai/single_pred_tasks/adme/)
@@ -85,6 +91,44 @@ and [artifact hashes](results/artifact_manifest.json).
 runs unit tests, live training smoke tests and committed-result checks without
 requiring a network dataset download or repeating the full experiment.
 
+## Robustness follow-up
+
+Closes three earlier gaps: five scaffold splits (seeds 20261024–20261028) × five
+paired model seeds (150 test metrics, 169,170 saved predictions); an equal-budget
+search per split, per approach, over three complete (learning rate, weight decay)
+bundles — (0.001, 0.0001), (0.0003, 0.0001), (0.001, 0.001) — selected on
+validation loss only (test targets are masked for every fit); and a test→train
+nearest-neighbor Tanimoto audit. Equal budget means equal candidate/task
+exposure, not equal FLOPs or runtime. The 25 runs are overlapping holdouts, not
+independent datasets: intervals are hierarchical percentile bootstrap (split
+clusters, then seeds within split; 20,000 draws) and exploratory.
+
+| Endpoint | Single task | Multitask | Paired gain [95% CI] | Bonferroni 98.33% CI | Help supported? |
+|---|---:|---:|---:|---:|---|
+| solubility (MAE) | 1.3835 | 1.4295 | -0.0460 [-0.0651, -0.0289] | [-0.0701, -0.0255] | No (multitask worse) |
+| caco2 (MAE) | 0.4876 | 0.4946 | -0.0070 [-0.0194, 0.0081] | [-0.0215, 0.0115] | No |
+| cyp2d6 (AP) | 0.5549 | 0.5332 | -0.0217 [-0.0617, 0.0040] | [-0.0719, 0.0063] | No |
+
+Selected bundles over 5 splits: single task candidate 0 ×2 / candidate 2 ×3;
+multitask candidate 0 ×3 / candidate 2 ×2 (candidate 1 never). **Conclusion:** no
+multitask benefit is detected with this fingerprint MLP and search; for solubility
+the data indicate a harm (-3.3% relative MAE). Caco-2 and CYP2D6 are inconclusive
+(intervals include zero); the CYP2D6 sign differs from the single-split run, so
+that earlier point gain should not be read as signal.
+
+**Nearest-neighbor audit** (radius-2, 1024-bit Morgan, test molecule vs. all
+training molecules, 16,685 test molecule-split pairs over 5 splits): median
+Tanimoto 0.44 per split (0.439–0.443); 441 pairs ≥ 0.8, 90 ≥ 0.9, 36 equal to 1.0
+(1.0 can be a fingerprint collision). Per endpoint ≥ 0.8: solubility 133/2710,
+caco2 33/574, cyp2d6 279/13633. No similarity-based exclusion was applied
+(descriptive only). Canonical-tautomer identities still cross partitions
+(5–11 shared per partition pair per split) and RDKit enumeration did not
+complete for 181 molecules; tautomer-grouped retraining is not done.
+
+Run `make robustness` (about 425 s on CPU with 2 threads on the recorded
+desktop). Evidence is in `results/robustness/` (metrics, predictions, splits,
+search scores, training histories, neighbors, similarity summary, hashes).
+
 ## Reproduce
 
 ```bash
@@ -105,15 +149,17 @@ run summarization afterwards to refresh reports and integrity hashes.
 
 ## Limitations
 
-- Repeated scaffold splits / split-level uncertainty: **not done**. Seed
-  intervals describe training randomness conditional on one split. Five
-  differences provide limited support for the t approximation.
-- Hyperparameter search and graph neural network baselines: **not done**.
-  Conclusions apply to this fingerprint MLP and training recipe.
+- Repeated scaffold splits / split-level uncertainty: **done** (5 splits × 5
+  seeds, see robustness follow-up). The splits overlap and share one split
+  algorithm, so intervals remain exploratory.
+- Hyperparameter search: **done, small** (3 bundles, one shared setting across
+  tasks, validation only). Broad search and graph neural network baselines:
+  **not done**. Conclusions apply to this fingerprint MLP.
 - Prospective validation, external cohorts and assay harmonization: **not done**.
   The labels come from heterogeneous assays and mostly different molecules.
-- Tautomer identity grouping and a similarity-based exclusion audit: **not done**.
-  Salt/stereoisomer identity and Murcko-scaffold checks do not eliminate every
+- Nearest-neighbor similarity audit and tautomer-overlap count: **done**
+  (descriptive). Similarity-based exclusion and tautomer-grouped retraining:
+  **not done**. Salt/stereoisomer identity and Murcko-scaffold checks do not eliminate every
   form of chemical similarity or source-level overlap.
 - Matched total parameter budgets and matched compute: **not done**. Shared
   and independent models also use different validation aggregation for stopping.

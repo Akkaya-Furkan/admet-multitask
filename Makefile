@@ -14,3 +14,7 @@ report:
 
 test:
 	$(PYTHON) -m pytest -q
+
+.PHONY: robustness
+robustness: data
+	$(PYTHON) scripts/run_robustness.py

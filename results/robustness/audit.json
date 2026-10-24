@@ -1,0 +1,200 @@
+{
+  "curation": {
+    "solubility": {
+      "raw_rows": 9982,
+      "invalid_or_nonfinite": 4,
+      "conflicting_molecules_dropped": 0,
+      "valid_rows_after_conflicts": 9978,
+      "unique_labels": 9140,
+      "duplicate_rows_aggregated": 838
+    },
+    "caco2": {
+      "raw_rows": 910,
+      "invalid_or_nonfinite": 0,
+      "conflicting_molecules_dropped": 0,
+      "valid_rows_after_conflicts": 910,
+      "unique_labels": 821,
+      "duplicate_rows_aggregated": 89
+    },
+    "cyp2d6": {
+      "raw_rows": 13130,
+      "invalid_or_nonfinite": 0,
+      "conflicting_molecules_dropped": 34,
+      "valid_rows_after_conflicts": 13058,
+      "unique_labels": 12824,
+      "duplicate_rows_aggregated": 234
+    }
+  },
+  "splits": [
+    {
+      "split_seed": 20261024,
+      "leakage": {
+        "train_valid_smiles_overlap": 0,
+        "train_valid_scaffold_overlap": 0,
+        "train_test_smiles_overlap": 0,
+        "train_test_scaffold_overlap": 0,
+        "valid_test_smiles_overlap": 0,
+        "valid_test_scaffold_overlap": 0
+      },
+      "labels": {
+        "solubility": {
+          "train": 8075,
+          "valid": 544,
+          "test": 521
+        },
+        "caco2": {
+          "train": 594,
+          "valid": 102,
+          "test": 125
+        },
+        "cyp2d6": {
+          "train": 7354,
+          "valid": 2733,
+          "test": 2737
+        }
+      },
+      "tautomer_overlap": {
+        "train_valid": 9,
+        "train_test": 8,
+        "valid_test": 8
+      },
+      "tautomer_enumeration_limited": 181
+    },
+    {
+      "split_seed": 20261025,
+      "leakage": {
+        "train_valid_smiles_overlap": 0,
+        "train_valid_scaffold_overlap": 0,
+        "train_test_smiles_overlap": 0,
+        "train_test_scaffold_overlap": 0,
+        "valid_test_smiles_overlap": 0,
+        "valid_test_scaffold_overlap": 0
+      },
+      "labels": {
+        "solubility": {
+          "train": 8066,
+          "valid": 529,
+          "test": 545
+        },
+        "caco2": {
+          "train": 591,
+          "valid": 105,
+          "test": 125
+        },
+        "cyp2d6": {
+          "train": 7364,
+          "valid": 2745,
+          "test": 2715
+        }
+      },
+      "tautomer_overlap": {
+        "train_valid": 11,
+        "train_test": 8,
+        "valid_test": 7
+      },
+      "tautomer_enumeration_limited": 181
+    },
+    {
+      "split_seed": 20261026,
+      "leakage": {
+        "train_valid_smiles_overlap": 0,
+        "train_valid_scaffold_overlap": 0,
+        "train_test_smiles_overlap": 0,
+        "train_test_scaffold_overlap": 0,
+        "valid_test_smiles_overlap": 0,
+        "valid_test_scaffold_overlap": 0
+      },
+      "labels": {
+        "solubility": {
+          "train": 8059,
+          "valid": 553,
+          "test": 528
+        },
+        "caco2": {
+          "train": 602,
+          "valid": 108,
+          "test": 111
+        },
+        "cyp2d6": {
+          "train": 7359,
+          "valid": 2718,
+          "test": 2747
+        }
+      },
+      "tautomer_overlap": {
+        "train_valid": 5,
+        "train_test": 11,
+        "valid_test": 10
+      },
+      "tautomer_enumeration_limited": 181
+    },
+    {
+      "split_seed": 20261027,
+      "leakage": {
+        "train_valid_smiles_overlap": 0,
+        "train_valid_scaffold_overlap": 0,
+        "train_test_smiles_overlap": 0,
+        "train_test_scaffold_overlap": 0,
+        "valid_test_smiles_overlap": 0,
+        "valid_test_scaffold_overlap": 0
+      },
+      "labels": {
+        "solubility": {
+          "train": 8049,
+          "valid": 529,
+          "test": 562
+        },
+        "caco2": {
+          "train": 588,
+          "valid": 122,
+          "test": 111
+        },
+        "cyp2d6": {
+          "train": 7386,
+          "valid": 2730,
+          "test": 2708
+        }
+      },
+      "tautomer_overlap": {
+        "train_valid": 8,
+        "train_test": 8,
+        "valid_test": 8
+      },
+      "tautomer_enumeration_limited": 181
+    },
+    {
+      "split_seed": 20261028,
+      "leakage": {
+        "train_valid_smiles_overlap": 0,
+        "train_valid_scaffold_overlap": 0,
+        "train_test_smiles_overlap": 0,
+        "train_test_scaffold_overlap": 0,
+        "valid_test_smiles_overlap": 0,
+        "valid_test_scaffold_overlap": 0
+      },
+      "labels": {
+        "solubility": {
+          "train": 8084,
+          "valid": 502,
+          "test": 554
+        },
+        "caco2": {
+          "train": 599,
+          "valid": 120,
+          "test": 102
+        },
+        "cyp2d6": {
+          "train": 7346,
+          "valid": 2752,
+          "test": 2726
+        }
+      },
+      "tautomer_overlap": {
+        "train_valid": 11,
+        "train_test": 6,
+        "valid_test": 10
+      },
+      "tautomer_enumeration_limited": 181
+    }
+  ]
+}

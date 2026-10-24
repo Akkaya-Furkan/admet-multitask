@@ -1,0 +1,57 @@
+{
+  "split_seeds": [
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028
+  ],
+  "model_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "search_seed": 101,
+  "candidates": [
+    {
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001
+    },
+    {
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0001
+    },
+    {
+      "learning_rate": 0.001,
+      "weight_decay": 0.001
+    }
+  ],
+  "bootstrap_draws": 20000,
+  "bootstrap_seed": 7301,
+  "selection": "minimum mean three-task normalized validation loss; first candidate breaks ties",
+  "budget": "3 complete three-task candidate bundles per approach per split; same epochs, patience, batches, architecture and search seed; not equal FLOPs or wall time",
+  "training": {
+    "seeds": [
+      11,
+      22,
+      33,
+      44,
+      55
+    ],
+    "split_seed": 20261024,
+    "fingerprint_bits": 1024,
+    "radius": 2,
+    "hidden": [
+      128,
+      64
+    ],
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "max_epochs": 60,
+    "patience": 10,
+    "threads": 2
+  }
+}

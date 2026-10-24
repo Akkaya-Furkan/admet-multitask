@@ -1,0 +1,74 @@
+[
+  {
+    "split_seed": 20261025,
+    "method": "single_task",
+    "candidate": 0,
+    "validation_losses": [
+      0.6012144088745117,
+      0.5718138813972473,
+      0.43047311902046204
+    ],
+    "score": 0.5345004697640737,
+    "selected": true
+  },
+  {
+    "split_seed": 20261025,
+    "method": "single_task",
+    "candidate": 1,
+    "validation_losses": [
+      0.6424086093902588,
+      0.6174501776695251,
+      0.42469966411590576
+    ],
+    "score": 0.5615194837252299,
+    "selected": false
+  },
+  {
+    "split_seed": 20261025,
+    "method": "single_task",
+    "candidate": 2,
+    "validation_losses": [
+      0.5987852215766907,
+      0.5981594324111938,
+      0.42253389954566956
+    ],
+    "score": 0.5398261845111847,
+    "selected": false
+  },
+  {
+    "split_seed": 20261025,
+    "method": "multitask",
+    "candidate": 0,
+    "validation_losses": [
+      0.652746856212616,
+      0.6088796257972717,
+      0.41646236181259155
+    ],
+    "score": 0.5593629479408264,
+    "selected": false
+  },
+  {
+    "split_seed": 20261025,
+    "method": "multitask",
+    "candidate": 1,
+    "validation_losses": [
+      0.6700648069381714,
+      0.5835806131362915,
+      0.44798511266708374
+    ],
+    "score": 0.5672101775805155,
+    "selected": false
+  },
+  {
+    "split_seed": 20261025,
+    "method": "multitask",
+    "candidate": 2,
+    "validation_losses": [
+      0.656814694404602,
+      0.5919467806816101,
+      0.4104978144168854
+    ],
+    "score": 0.5530864298343658,
+    "selected": true
+  }
+]

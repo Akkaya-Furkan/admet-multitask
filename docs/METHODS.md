@@ -43,3 +43,26 @@ No common scalar metric is averaged across incompatible endpoints.
 These intervals only quantify training-seed variability conditional on one
 split and one dataset. Normality of five differences cannot be established;
 these are exploratory diagnostics, not independent experimental replication.
+
+## Repeated-split and equal-budget follow-up
+
+Run `python scripts/run_robustness.py` after downloading the data. The executable
+plan, candidate scores, selected bundles, complete fitting histories, per-run
+metrics, predictions, split assignments and artifact hashes live under
+`results/robustness/`. See the continuation in [scope](SCOPE.md) for the frozen
+budget and inference rules. Regression standardization is recomputed within
+each split using only its training labels. Search selection minimizes normalized
+validation MSE/BCE, whereas final evaluation remains MAE/AP. Independent
+candidate bundles use one common hyperparameter setting for all three tasks;
+per-task independent search would increase their selection flexibility and is
+not performed. Early stopping remains per task for ST and aggregate for MT.
+
+Tautomer identities use RDKit enumeration and canonical selection, recording
+non-completed enumeration statuses. These identities are diagnostic only.
+Canonical does not imply the most stable tautomer under assay conditions; see
+[RDKit's TautomerEnumerator documentation](https://rdkit.org/docs/source/rdkit.Chem.MolStandardize.rdMolStandardize.html).
+Nearest-neighbor search uses exact bit-vector Tanimoto against every molecule in
+the training union, including molecules without a label for the endpoint being
+summarized. Similarity 1.0 can reflect fingerprint collisions and does not by
+itself establish identical molecules. Thresholds 0.8/0.9 are descriptive; no
+chemical-neighbor exclusion is applied after seeing test outcomes.
