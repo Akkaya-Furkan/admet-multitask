@@ -1,0 +1,54 @@
+{
+  "acceptance.json": {
+    "bytes": 421,
+    "sha256": "00b75fcde3fe28858b0a5ac0e4ccc8302df2280cee5c4648a7fde81ad4065a8c"
+  },
+  "audit.json": {
+    "bytes": 1699,
+    "sha256": "4bf798440f6f0683a826cae28555f91bac960dc16a1995b5e1a5b7556419b36e"
+  },
+  "comparison.csv": {
+    "bytes": 900,
+    "sha256": "25b4190b26eaeef23e768035d6588649584f5168e16923a00a0f9ae450e561cc"
+  },
+  "comparison.md": {
+    "bytes": 430,
+    "sha256": "c3010791707aed61877a970e8075dba41c17f7f67a53926d22dbb196792e00ea"
+  },
+  "comparison.png": {
+    "bytes": 160380,
+    "sha256": "684f9e1570cd39a4640f8796e9a41980ecf451066596f553aa3a8cac3631264d"
+  },
+  "config.json": {
+    "bytes": 291,
+    "sha256": "4f697d4ac35c72b4f186c843966f4fb4ec7de78555fafa1ebd74471d1bb1afaa"
+  },
+  "data_manifest.json": {
+    "bytes": 638,
+    "sha256": "46acf0d181f4621ce6ce759cff021cfd44545d69237fd930439f349265205ade"
+  },
+  "metrics.csv": {
+    "bytes": 1505,
+    "sha256": "754d2b0b37c3417e5d28fbbe1908d5ff0d5ace008c12077a92625a9f209fd25c"
+  },
+  "molecules.csv.gz": {
+    "bytes": 328516,
+    "sha256": "6c4c300ac93206056336733331a46bb158bf6cde9cd267b70e134f069478469b"
+  },
+  "paired_differences.csv": {
+    "bytes": 500,
+    "sha256": "1e9bab413a6547ddfc43e603ffd7eea8b42cec2b1c8d76de623c5be14a9cd3eb"
+  },
+  "predictions.csv.gz": {
+    "bytes": 498880,
+    "sha256": "1deb69540d27a1c759d84fcb16b3212b19a54ddf2350a24561f8eff9b9352822"
+  },
+  "run_metadata.json": {
+    "bytes": 831,
+    "sha256": "198a1036073537db941ca7e3fd20b6dd6cb903930f488758440608d98c28d1a9"
+  },
+  "training.json": {
+    "bytes": 31355,
+    "sha256": "98b08d7d1329ac169d09d7ee889352f9f561820f48d8ef65064239c64806a2e7"
+  }
+}

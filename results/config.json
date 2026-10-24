@@ -1,0 +1,22 @@
+{
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "split_seed": 20261024,
+  "fingerprint_bits": 1024,
+  "radius": 2,
+  "hidden": [
+    128,
+    64
+  ],
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "batch_size": 256,
+  "max_epochs": 60,
+  "patience": 10,
+  "threads": 2
+}

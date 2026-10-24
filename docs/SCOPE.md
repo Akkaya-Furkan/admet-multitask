@@ -1,0 +1,43 @@
+# Scope and acceptance criteria
+
+## Question
+Does sharing a molecular representation help predict aqueous solubility,
+Caco-2 permeability and CYP2D6 inhibition, relative to independent networks?
+
+## One-day experiment (2026-10-24)
+Use the complete public TDC Solubility_AqSolDB, Caco2_Wang and CYP2D6_Veith
+files from Harvard Dataverse. Use standardized parent canonical SMILES,
+merge repeated measurements (mean for regression; discard conflicting binary
+labels), and unite molecules across tasks before splitting. Generate Morgan
+fingerprints and compare independent single-task MLPs with one shared-trunk,
+three-head MLP. Hidden architecture, optimizer, maximum epochs and validation
+selection rule are identical. Regression targets are standardized on training
+labels only; missing labels are masked; each task contributes equal loss weight.
+
+Freeze one label-blind, global Bemis–Murcko scaffold split, targeting 70/15/15.
+The empty scaffold is one group (acyclic molecules stay together). Repeat
+initialization/minibatch seeds 11, 22, 33, 44, 55 on this same split. Report
+MAE for regression and average precision (AP) for classification, mean ± sample
+standard deviation, all paired differences, and paired t intervals across seeds.
+The intervals measure training randomness on a fixed split, not population or
+split uncertainty. No test-set tuning or selection is allowed.
+
+## Numeric acceptance criteria (defined before training)
+- Download 3/3 datasets with URL, byte count and SHA-256 provenance.
+- Each task has at least 30 observed train, validation and test labels; the
+  classification task has both classes in every partition.
+- Zero canonical-molecule and scaffold intersections between every pair of
+  partitions, including across tasks. Persist identities, split and audit.
+- Complete 5 seeds × 2 approaches × 3 tasks = 30 test metric records and
+  save test predictions. Every metric must be finite.
+- Produce one machine-readable comparison table and one comparison plot,
+  plus automated tests and a passing GitHub Actions CI run.
+- A positive endpoint-level claim requires a paired improvement interval
+  strictly above zero and an average gain of at least 5% in MAE (regression)
+  or 0.02 absolute AP (classification). Apply Bonferroni correction across
+  the three endpoint claims (family alpha 0.05). Otherwise say evidence is
+  insufficient. A general claim of help requires all three endpoints to pass.
+
+## Exclusions
+No ligand/thesis or homelab data; no deployment; no hyperparameter search,
+pretraining, graph model, prospective validation, clinical use, or SOTA claim.

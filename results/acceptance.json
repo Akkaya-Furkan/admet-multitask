@@ -1,0 +1,15 @@
+{
+  "datasets_expected": 3,
+  "datasets_actual": 3,
+  "metric_records_expected": 30,
+  "metric_records_actual": 30,
+  "prediction_records_expected": 33830,
+  "prediction_records_actual": 33830,
+  "leakage_checks_expected": 6,
+  "leakage_checks_actual": 6,
+  "overlap_total": 0,
+  "minimum_labels_per_task_partition": 102,
+  "supported_endpoints": 0,
+  "general_help_supported": false,
+  "local_experiment_passed": true
+}

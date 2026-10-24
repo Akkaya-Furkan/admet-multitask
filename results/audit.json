@@ -1,0 +1,79 @@
+{
+  "solubility": {
+    "raw_rows": 9982,
+    "invalid_or_nonfinite": 4,
+    "conflicting_molecules_dropped": 0,
+    "valid_rows_after_conflicts": 9978,
+    "unique_labels": 9140,
+    "duplicate_rows_aggregated": 838
+  },
+  "caco2": {
+    "raw_rows": 910,
+    "invalid_or_nonfinite": 0,
+    "conflicting_molecules_dropped": 0,
+    "valid_rows_after_conflicts": 910,
+    "unique_labels": 821,
+    "duplicate_rows_aggregated": 89
+  },
+  "cyp2d6": {
+    "raw_rows": 13130,
+    "invalid_or_nonfinite": 0,
+    "conflicting_molecules_dropped": 34,
+    "valid_rows_after_conflicts": 13058,
+    "unique_labels": 12824,
+    "duplicate_rows_aggregated": 234
+  },
+  "leakage": {
+    "train_valid_smiles_overlap": 0,
+    "train_valid_scaffold_overlap": 0,
+    "train_test_smiles_overlap": 0,
+    "train_test_scaffold_overlap": 0,
+    "valid_test_smiles_overlap": 0,
+    "valid_test_scaffold_overlap": 0
+  },
+  "union_molecules": 22248,
+  "multi_label_molecules": 474,
+  "split_molecules": {
+    "test": 3337,
+    "train": 15574,
+    "valid": 3337
+  },
+  "split_scaffolds": {
+    "test": 3337,
+    "train": 2721,
+    "valid": 3337
+  },
+  "empty_scaffold_molecules": 2703,
+  "labels": {
+    "solubility": {
+      "train": 8075,
+      "valid": 544,
+      "test": 521
+    },
+    "caco2": {
+      "train": 594,
+      "valid": 102,
+      "test": 125
+    },
+    "cyp2d6": {
+      "train": 7354,
+      "valid": 2733,
+      "test": 2737
+    }
+  },
+  "classification_positives": {
+    "train": 1313,
+    "valid": 575,
+    "test": 567
+  },
+  "training_target_means": [
+    -2.8615128993988037,
+    -5.182497501373291,
+    0.0
+  ],
+  "training_target_scales": [
+    2.325483798980713,
+    0.7703107595443726,
+    1.0
+  ]
+}

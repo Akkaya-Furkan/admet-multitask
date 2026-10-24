@@ -1,0 +1,20 @@
+{
+  "solubility": {
+    "url": "https://dataverse.harvard.edu/api/access/datafile/4259610",
+    "bytes": 852658,
+    "sha256": "0b593f7b55abbe477ba4284aefd7b5450551f4ed21ac4aed80a097931141c9a4",
+    "rows": 9982
+  },
+  "caco2": {
+    "url": "https://dataverse.harvard.edu/api/access/datafile/4259569",
+    "bytes": 82501,
+    "sha256": "447d9f1af487c06b080145a2361dbe45af5b27afc83e1a975dd29b9ea535d6ab",
+    "rows": 910
+  },
+  "cyp2d6": {
+    "url": "https://dataverse.harvard.edu/api/access/datafile/4259580",
+    "bytes": 799509,
+    "sha256": "1b50a2f02a6d9c02d29fd9e3684d661f64bfe8afb1fea09e5ffb3d54174c411b",
+    "rows": 13130
+  }
+}
