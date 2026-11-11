@@ -15,6 +15,6 @@
     "src/admet_multitask/__init__.py": "33d0dda604725ea205415d2bea8662b6c73ba340eb3efaf9274b648959861229",
     "src/admet_multitask/data.py": "a11b8f5116c798f8fb9232fa2d48594b6c8dd44025fa22b6e8e72941e63446db",
     "src/admet_multitask/model.py": "810b644539f38bb144aa4c669c0d6e1e379a25b8a00aedf8e537f531ec1c3182",
-    "/home/furkanakkaya/Projeler/GitHub_Projeleri/admet-multitask/scripts/run_experiment.py": "8a90b70d7c2ffaeb10f5c684d8fda815a457d8d3699cbef2e659a466355b68a9"
+    "scripts/run_experiment.py": "8a90b70d7c2ffaeb10f5c684d8fda815a457d8d3699cbef2e659a466355b68a9"
   }
 }
