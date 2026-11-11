@@ -44,8 +44,8 @@
     "sha256": "1deb69540d27a1c759d84fcb16b3212b19a54ddf2350a24561f8eff9b9352822"
   },
   "run_metadata.json": {
-    "bytes": 831,
-    "sha256": "198a1036073537db941ca7e3fd20b6dd6cb903930f488758440608d98c28d1a9"
+    "bytes": 770,
+    "sha256": "2c51b1bae53b4450f2eaba4e5c804153b3d2f009dc09a7fc014795a8c84c53c3"
   },
   "training.json": {
     "bytes": 31355,
